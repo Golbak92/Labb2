@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace Lab2
 {
-    abstract class Circle : Shape2D
+    class Circle : Shape2D
     {
+        public override float Circumference => throw new NotImplementedException();
     }
 }
