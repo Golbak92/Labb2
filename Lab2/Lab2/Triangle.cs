@@ -9,14 +9,9 @@ namespace Lab2
     {
         public override float Circumference => throw new NotImplementedException();
 
-        public Vector2 p1;
-        public Vector2 p2;
-        public Vector2 p3;
-
-        public Triangle (Vector2 aP1, Vector2 aP2, Vector2 aP3)
+        public Triangle (Vector2 p1, Vector2 p2, Vector2 p3)
         {
-        }  
 
-        
+        }  
     }
 }
