@@ -5,13 +5,17 @@ using System.Text;
 
 namespace Lab2
 {
-    class Triangle : Shape2D
+    public class Triangle : Shape2D
     {
-        public override float Circumference => throw new NotImplementedException();
-
         public Triangle (Vector2 p1, Vector2 p2, Vector2 p3)
         {
+        }
 
-        }  
+        public override string ToString()
+        {
+            return $"Circle @({p1})";
+        }
+
+        public override float Circumference => throw new NotImplementedException();
     }
 }

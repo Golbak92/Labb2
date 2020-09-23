@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lab2
 {
-    abstract class Shape2D : Shape
+    public abstract class Shape2D : Shape
     {
         public override Vector3 Center => throw new NotImplementedException();
 

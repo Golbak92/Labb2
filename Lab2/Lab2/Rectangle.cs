@@ -5,13 +5,20 @@ using System.Text;
 
 namespace Lab2
 {
-    class Rectangle : Shape2D
+    public class Rectangle : Shape2D
     {
-        public override float Circumference => throw new NotImplementedException();
+        private Vector2 center;
+        private Vector2 radius;
 
         public Rectangle(Vector2 center, Vector2 size)
         {
+            this.center = center;
+            this.radius = size;
+        }
 
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
