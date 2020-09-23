@@ -16,6 +16,8 @@ namespace Shapes
             this.radius = size;
         }
 
+        public override float Circumference => throw new NotImplementedException();
+
         public override string ToString()
         {
             return base.ToString();

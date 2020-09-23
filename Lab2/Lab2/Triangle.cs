@@ -13,7 +13,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return $"Circle @({p1})";
+            return $"Circle @()";
         }
 
         public override float Circumference => throw new NotImplementedException();
