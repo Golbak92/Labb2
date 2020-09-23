@@ -32,11 +32,22 @@ namespace Shapes
                     return true;
                 }
                 else
-                { 
-                    return false; 
+                {
+                    return false;
                 }
             }
         }
+
+        public override Vector3 Center 
+            {
+                get { return center; }
+            }
+
+        public override float Area
+        {   //Area = 2 × Width × Length + 2 × Length × Height + 2 × Width × Height
+            get { return  2 * ((size.X * size.Y) +  (size.Y * size.Z) + (size.X * size.Z)); }
+        }
+
         public override float Volume
         {   //Volume = Length × Width ×  Height
             get { return size.X * size.Y * size.Z; }
