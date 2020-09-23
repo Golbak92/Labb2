@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace Lab2
+namespace Shapes
 {
     class Triangle : Shape2D
     {

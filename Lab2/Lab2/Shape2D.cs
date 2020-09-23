@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace Lab2
+namespace Shapes
 {
     abstract class Shape2D : Shape
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace Lab2
+namespace Shapes
 {
     class Circle : Shape2D
     {
@@ -11,7 +11,7 @@ namespace Lab2
 
         public Circle(Vector2 Center, float radius)
         {
-
+            
         }
     }
 }
