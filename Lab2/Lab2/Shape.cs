@@ -7,5 +7,16 @@ namespace Lab2
     {
         public abstract Vector3 Center { get; }
         public abstract float Area { get; }
+
+        public static void GenerateShape()
+        {
+
+        }
+
+        public static void GenerateShape(Vector3 midpoint)
+        {
+
+        }
+
     }
 }
