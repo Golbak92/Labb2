@@ -8,7 +8,6 @@ namespace ShapeTester
         {
             Console.WriteLine("Hello World!");
 
-            Cuboid asdf = new Shapes.Cuboid();
         }
     }
 }
