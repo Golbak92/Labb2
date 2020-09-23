@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 
-namespace Lab2
+namespace Shapes
 {
-    abstract class Shape3D : Shape
+    public abstract  class Shape3D : Shape
     {
         public abstract float Volume { get; }
 

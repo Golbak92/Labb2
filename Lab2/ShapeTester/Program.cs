@@ -1,6 +1,5 @@
 ﻿using System;
-using Lab2;
-
+using Shapes;
 namespace ShapeTester
 {
     class Program
@@ -9,7 +8,7 @@ namespace ShapeTester
         {
             Console.WriteLine("Hello World!");
 
-            Circle
+            Cuboid asdf = new Shapes.Cuboid();
         }
     }
 }

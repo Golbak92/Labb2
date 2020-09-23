@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace Lab2
+namespace Shapes
 {
     public abstract class Shape
     {

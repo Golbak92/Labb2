@@ -1,26 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 
-namespace Lab2
+namespace Shapes
 {
-    class Cuboid : Shape3D
+    public class Cuboid : Shape3D
     {
+        //Cuboid c = new Cuboid(Vector3.Zero, new Vector3(1.0f, 2.0f, 3.0f));
+        private Vector3 size;
+        private Vector3 center;
+
         public Cuboid(Vector3 center, Vector3 size)
         {
-
+            this.center = center;
+            this.size = size;
         }
 
         public Cuboid(Vector3 center, float width)
         {
-
+            this.center = center;
+            size.X = width;
+            size.Y = width;
+            size.Z = width;
         }
 
         public bool IsCube
         {
-            get;
+            get
+            {
+                if (size.X == size.Y && size.X == size.Z)
+                {
+                    return true;
+                }
+                else
+                { 
+                    return false; 
+                }
+            }
         }
-        public override float Volume => throw new NotImplementedException();
+        public override float Volume
+        {   //Volume = Length × Width ×  Height
+            get { return size.X * size.Y * size.Z; }
+        }
+
+        public override string ToString()
+        {
+            if (size.X != size.Y)
+            {
+            return $"Cuboid @({size.X}, {size.Y}, {size.Z}): w = {size.X}, h = {size.Y}, l={size.Z}";
+            }
+            else
+            {
+                return $"Cube @({size.X}, {size.Y}, {size.Z}): w = {size.X}, h = {size.Y}, l={size.Z}";
+            }
+        }
     }
 }
