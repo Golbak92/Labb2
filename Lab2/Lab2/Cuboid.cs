@@ -40,7 +40,7 @@ namespace Shapes
 
         public override Vector3 Center 
             {
-                get { return center; }
+            get { return new Vector3(center.X = (size.X / 2), center.Y = (size.Y / 2), center.Z = (size.Z / 2 ));}
             }
 
         public override float Area
@@ -57,11 +57,11 @@ namespace Shapes
         {
             if (size.X != size.Y)
             {
-            return $"Cuboid @({size.X}, {size.Y}, {size.Z}): w = {size.X}, h = {size.Y}, l={size.Z}";
+            return $"Cuboid @({center.X}, {center.Y}, {center.Z}): w = {size.X}, h = {size.Y}, l = {size.Z}";
             }
             else
             {
-                return $"Cube @({size.X}, {size.Y}, {size.Z}): w = {size.X}, h = {size.Y}, l={size.Z}";
+                return $"Cube @({center.X}, {center.Y}, {center.Z}): w = {size.X}, h = {size.Y}, l = {size.Z}";
             }
         }
     }
