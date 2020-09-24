@@ -8,7 +8,7 @@ namespace ShapeTester
         static void Main(string[] args)
         {
 
-            Rectangle hej = new Rectangle(Vector3.Zero, new Vector2(5f, 2f));
+            Cuboid hej = new Cuboid(Vector3.Zero, new Vector3(5f, 5f, 5f));
 
             Console.WriteLine(hej);
             
