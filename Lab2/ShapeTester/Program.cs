@@ -8,9 +8,9 @@ namespace ShapeTester
         static void Main(string[] args)
         {
 
-            Cuboid cuboid = new Cuboid(Vector3.Zero, new Vector3(8f, 6f, 5f));
+            Triangle hej = new Triangle(new Vector2(5f, 8f), new Vector2(9f, 3f), new Vector2(7f, 8f));
 
-            Console.WriteLine(cuboid.Area);
+            Console.WriteLine(hej.Area);
             
         }
     }
