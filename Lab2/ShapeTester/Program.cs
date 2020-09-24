@@ -8,9 +8,9 @@ namespace ShapeTester
         static void Main(string[] args)
         {
 
-            Triangle hej = new Triangle(new Vector2(5.0f, 8.0f), new Vector2(9.0f, 3.0f), new Vector2(7.0f, 8.0f));
+            Rectangle hej = new Rectangle(Vector3.Zero, new Vector2(5f, 2f));
 
-            Console.WriteLine(hej.Area);
+            Console.WriteLine(hej);
             
         }
     }
