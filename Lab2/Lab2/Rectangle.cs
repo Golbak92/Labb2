@@ -70,7 +70,6 @@ namespace Shapes
             }
         }
 
-
         public override string ToString()
         {
             if (size.X == size.Y)
