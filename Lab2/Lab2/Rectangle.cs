@@ -8,17 +8,6 @@ namespace Shapes
         private Vector3 center;
         private Vector2 size;
         private float width;
-        //public Vector2 size
-        //{ get; }
-
-        //public override float Circumference
-        //{ get; }
-
-        //public override float Area
-        //{ get; }
-
-        //public override Vector3 Center
-        //{ get; }
 
         public bool isSquare
         {
@@ -39,28 +28,15 @@ namespace Shapes
         {
             this.size = size;
             this.center = center;
-
-            ////Area
-            //new Vector2(size.X * size.Y);
-
-            ////Circumference
-            //new Vector2(2 * (size.X) + 2 * (size.Y));
         }
-
 
         public Rectangle(Vector3 center, float width)
         {
             this.center = center;
+            this.width = width;
             size.X = width;
             size.Y = width;
-
-            ////Area
-            //size = new Vector2((float)width * width);
-
-            ////Circumference
-            //new Vector2(4 * width);
         }
-
 
         public override float Circumference
         { // Square: 4 * x, Rectangle: 2 * (width) + 2 * (height)
@@ -87,10 +63,10 @@ namespace Shapes
         }
 
         public override Vector3 Center
-        {  //Midpoint: x = width1 + height1 / 2, y = width2 + height2 / 2
+        { 
             get
             {
-                return new Vector3(center.X = size.X / 2, center.Y = size.Y / 2, 0);
+                return center;
             }
         }
 

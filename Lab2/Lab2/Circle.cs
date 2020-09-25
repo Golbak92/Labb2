@@ -10,41 +10,24 @@ namespace Shapes
         private Vector3 center;
         private float radius;
 
-        //public override float Circumference
-        //{ get; }
-
-        //public override float Area
-        //{ get; }
-
-        //public override Vector3 Center
-        //{ get; }
-
         public Circle(Vector3 center, float radius)
         {
             this.center = center;
             this.radius = radius;
-
-            ////Circumferene - π * d = π * 2r
-            //Circumference = (float)Math.PI * (radius * 2);
-
-            ////Area - π * r^2
-            //Area = (float)(Math.PI*(Math.Pow((radius), 2)));
-
-            //Center = new Vector3(new Vector2(center.X, center.Y), 0);
         }
 
         public override Vector3 Center
         {
             get
             {
-                return Vector3.Zero;
+                return center;
             }
         }
         public override float Area
         {  // π * r^2
             get
             { 
-                return (float)(Math.PI * (Math.Pow((radius), 2)));
+                return (float)(MathF.PI * (MathF.Pow((radius), 2)));
             }
         }
 
@@ -52,7 +35,7 @@ namespace Shapes
         {  // π * d == π * 2r
             get
             { 
-                return (float)Math.PI * (radius * 2);
+                return (float)MathF.PI * (radius * 2);
             }
         }
 
