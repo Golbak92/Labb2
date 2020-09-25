@@ -5,7 +5,6 @@ namespace Shapes
 {
     public class Cuboid : Shape3D
     {
-        //Cuboid c = new Cuboid(Vector3.Zero, new Vector3(1.0f, 2.0f, 3.0f));
         private Vector3 size;
         private Vector3 center;
 
@@ -40,7 +39,7 @@ namespace Shapes
 
         public override Vector3 Center 
             {
-            get { return new Vector3(center.X = (size.X / 2), center.Y = (size.Y / 2), center.Z = (size.Z / 2 ));}
+            get { return center; }
             }
 
         public override float Area

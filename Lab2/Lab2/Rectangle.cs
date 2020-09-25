@@ -51,6 +51,7 @@ namespace Shapes
         public Rectangle(Vector3 center, float width)
         {
             this.center = center;
+            this.width = width;
             size.X = width;
             size.Y = width;
 
