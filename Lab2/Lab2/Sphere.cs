@@ -16,16 +16,25 @@ namespace Shapes
             this.center = center;
         }
 
+        public override Vector3 Center
+        {
+            get { return center; }
+        }
+        public override float Area
+        {   //A=4πr2
+            get { return 4 * MathF.PI * MathF.Pow(radius, 2); }
+        }
+
         public override float Volume
         {
             // V=4/3πr3
-            get { return (float)((4 / 3) * Math.PI * Math.Pow(radius, 3)); }
+            get { return 4.0f / 3.0f * MathF.PI * MathF.Pow(radius, 3); }
 
         }
 
         public override string ToString()
         {
-            return $"Sphere @(0.0, 1.0, 0.0): r = {radius}";
+            return $"Sphere @({center.X}, {center.Y}, {center.Z}): r = {radius}";
         }
     }
 }
