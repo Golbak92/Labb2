@@ -49,8 +49,7 @@ namespace Shapes
                 else
                 {
                     return 2 * (size.X) + 2 * (size.Y);
-                }
-                
+                }   
             }
         }
 
@@ -74,11 +73,11 @@ namespace Shapes
         {
             if (size.X == size.Y)
             {
-                return $"Square @({Center.X}, {Center.Y}): w = {size.X}, h = {size.Y}";
+                return $"Square @({Center.X:0.0}, {Center.Y:0.0}): w = {size.X:0.0}, h = {size.Y:0.0}";
             }
             else
             {
-                return $"Rectangle @({Center.X}, {Center.Y}): w = {size.X}, h = {size.Y}";
+                return $"Rectangle @({Center.X:0.0}, {Center.Y:0.0}): w = {size.X:0.0}, h = {size.Y:0.0}";
             }
         }
     }

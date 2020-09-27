@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Runtime.Serialization;
 
 namespace Shapes
 {
@@ -50,7 +51,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return $"Triangle @({Center.X}, {Center.Y}): p1({p1.X}, {p1.Y}), p2({p2.X}, {p2.Y}), p3({p3.X}, {p3.Y})";
+            return $"Triangle @({Center.X:0.0}, {Center.Y:0.0}): p1({p1.X:0.0}, {p1.Y:0.0}), p2({p2.X:0.0}, {p2.Y:0.0}), p3({p3.X:0.0}, {p3.Y:0.0})";
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return $"Circle @({center.X}, {center.Y}): r = {radius}";
+            return $"Circle @({center.X:0.0}, {center.Y:0.0}): r = {radius:0.0}";
         }
     }
 }

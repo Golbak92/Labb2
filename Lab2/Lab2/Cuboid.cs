@@ -56,11 +56,11 @@ namespace Shapes
         {
             if (size.X != size.Y)
             {
-            return $"Cuboid @({center.X}, {center.Y}, {center.Z}): w = {size.X}, h = {size.Y}, l = {size.Z}";
+            return $"Cuboid @({center.X:0.0}, {center.Y:0.0}, {center.Z:0.0}): w = {size.X:0.0}, h = {size.Y:0.0}, l = {size.Z:0.0}";
             }
             else
             {
-                return $"Cube @({center.X}, {center.Y}, {center.Z}): w = {size.X}, h = {size.Y}, l = {size.Z}";
+                return $"Cube @({center.X:0.0}, {center.Y:0.0}, {center.Z:0.0}): w = {size.X:0.0}, h = {size.Y:0.0}, l = {size.Z:0.0}";
             }
         }
     }

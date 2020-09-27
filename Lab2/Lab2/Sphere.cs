@@ -34,7 +34,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return $"Sphere @({center.X}, {center.Y}, {center.Z}): r = {radius}";
+            return $"Sphere @({center.X:0.0}, {center.Y:0.0}, {center.Z:0.0}): r = {radius:0.0}";
         }
     }
 }
