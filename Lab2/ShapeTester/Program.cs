@@ -9,16 +9,27 @@ namespace ShapeTester
         static void Main(string[] args)
         {
             List<Shape> shapes = new List<Shape>();
+            float totalTriangleCircumference = 0;
+            float averageArea = 0;
 
             for (int i = 0; i < 20; i++)
             {
                 shapes.Add(Shape.GenerateShape());
             }
 
-            for (int i = 0; i < 20; i++)
+            foreach (Shape shape in shapes)
             {
-            Console.WriteLine(Shape.GenerateShape(new Vector3(1.5f, 2.5f, 3.5f))); 
+                Console.WriteLine(shape);
+
+                if (shape is Triangle)
+                {
+                    totalTriangleCircumference += (shape as Triangle).Circumference;
+                }
+
+                averageArea += MathF.Round(shape.Area, 1);
+                Console.WriteLine(MathF.Round(shape.Area, 1));
             }
+                Console.WriteLine($"Average area: {MathF.Round(averageArea / 20, 1)}");
 
         }
     }
