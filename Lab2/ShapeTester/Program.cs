@@ -1,6 +1,8 @@
 ﻿using Shapes;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
+
 namespace ShapeTester
 {
     class Program
@@ -33,14 +35,11 @@ namespace ShapeTester
                         biggestVolume = (shape as Shape3D).Volume;
                     }
                 }
-                Console.WriteLine(shape.Area);
                 averageArea += shape.Area;
             }
 
             Console.WriteLine();
             Console.WriteLine($"Total circumference of triangles: {MathF.Round(totalTriangleCircumference, 1)}\nAverage area: {MathF.Round(averageArea / 20, 1)}\nBiggest volume: {biggestVolume}");
-
-
         }
     }
 }

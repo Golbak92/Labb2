@@ -9,8 +9,8 @@ namespace Shapes
     {
         public abstract float Volume { get; }
 
-        public override Vector3 Center => throw new NotImplementedException();
+        public override Vector3 Center { get; }
 
-        public override float Area => throw new NotImplementedException();
+        public override float Area { get; }
     }
 }

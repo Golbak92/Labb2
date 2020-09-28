@@ -1,23 +1,30 @@
 ﻿using System;
+using System.Collections;
 using System.Numerics;
-using System.Runtime.Serialization;
 
 namespace Shapes
 {
-    public class Triangle : Shape2D
+    public class Triangle : Shape2D, IEnumerable, IEnumerator
     {
         private Vector2 p1;
         private Vector2 p2;
         private Vector2 p3;
+
         private float ac;
         private float ba;
         private float bc;
+
+        private int position = -1;
+        private Vector2[] vectArray = new Vector2[3];
 
         public Triangle(Vector2 p1, Vector2 p2, Vector2 p3)
         {
             this.p1 = p1;
             this.p2 = p2;
             this.p3 = p3;
+            vectArray[0] = p1;
+            vectArray[1] = p2;
+            vectArray[2] = p3;
 
             //Calculation of the length between p1, p2 and p3.
             ac = MathF.Sqrt(MathF.Pow((p1.X - p2.X), 2) + MathF.Pow((p1.Y - p2.Y), 2));
@@ -53,5 +60,26 @@ namespace Shapes
         {
             return $"Triangle @({Center.X:0.0}, {Center.Y:0.0}): p1({p1.X:0.0}, {p1.Y:0.0}), p2({p2.X:0.0}, {p2.Y:0.0}), p3({p3.X:0.0}, {p3.Y:0.0})";
         }
+
+        public IEnumerator GetEnumerator()
+        {
+            return this;
+        }
+        public object Current => vectArray[position];
+
+        public bool MoveNext()
+        {
+            if (position < vectArray.Length - 1)
+            {
+                position++;
+                return true;
+            }
+            else return false;
+        }
+        public void Reset()
+        {
+            position = 0;
+        }
+
     }
 }
