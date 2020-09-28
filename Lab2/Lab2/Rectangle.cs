@@ -28,8 +28,8 @@ namespace Shapes
         {
             //this.size = size;
             this.center = center;
-            this.size.X = (float)Math.Round(size.X, 1);
-            this.size.Y = (float)Math.Round(size.Y, 1);
+            this.size.X = MathF.Round(size.X, 1);
+            this.size.Y = MathF.Round(size.Y, 1);
         }
 
         public Rectangle(Vector3 center, float width)
@@ -59,7 +59,7 @@ namespace Shapes
         { // width * height;
             get
             {
-                return (float)Math.Round(size.X * size.Y, 1);
+                return MathF.Round(size.X * size.Y, 1);
             } 
         }
 
