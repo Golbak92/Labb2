@@ -26,6 +26,10 @@ namespace ShapeTester
                     totalTriangleCircumference += (shape as Triangle).Circumference;
                 }
 
+                if (shape is Cuboid |)
+                {
+
+                }
                 averageArea += MathF.Round(shape.Area, 1);
                 Console.WriteLine(MathF.Round(shape.Area, 1));
             }
