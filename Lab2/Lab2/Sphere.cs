@@ -12,7 +12,7 @@ namespace Shapes
 
         public Sphere(Vector3 center, float radius)
         {
-            this.radius = radius;
+            this.radius = MathF.Round(radius);
             this.center = center;
         }
 
@@ -22,13 +22,13 @@ namespace Shapes
         }
         public override float Area
         {   //A=4πr2
-            get { return 4 * MathF.PI * MathF.Pow(radius, 2); }
+            get { return MathF.Round(4 * MathF.PI * MathF.Pow(radius, 2), 1); }
         }
 
         public override float Volume
         {
             // V=4/3πr3
-            get { return 4.0f / 3.0f * MathF.PI * MathF.Pow(radius, 3); }
+            get { return MathF.Round(4.0f / 3.0f * MathF.PI * MathF.Pow(radius, 3), 1); }
 
         }
 

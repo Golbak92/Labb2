@@ -20,16 +20,16 @@ namespace Shapes
             this.p3 = p3;
 
             //Calculation of the length between p1, p2 and p3.
-            ac = (float)MathF.Sqrt(MathF.Pow((p1.X - p2.X), 2) + MathF.Pow((p1.Y - p2.Y), 2));
-            ba = (float)MathF.Sqrt(MathF.Pow((p1.X - p3.X), 2) + MathF.Pow((p1.Y - p3.Y), 2));
-            bc = (float)MathF.Sqrt(MathF.Pow((p3.X - p2.X), 2) + MathF.Pow((p3.Y - p2.Y), 2));
+            ac = MathF.Sqrt(MathF.Pow((p1.X - p2.X), 2) + MathF.Pow((p1.Y - p2.Y), 2));
+            ba = MathF.Sqrt(MathF.Pow((p1.X - p3.X), 2) + MathF.Pow((p1.Y - p3.Y), 2));
+            bc = MathF.Sqrt(MathF.Pow((p3.X - p2.X), 2) + MathF.Pow((p3.Y - p2.Y), 2));
         }
 
         public override float Circumference
         { // ac + ba + bc (distance between ac, ba and bc)
             get
             {
-                return MathF.Round(ac + ba + bc, 1);
+                return ac + ba + bc;
             }
         }
 
@@ -37,7 +37,7 @@ namespace Shapes
         { // 1/2 * [x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
             get
             {
-                return MathF.Round(MathF.Sqrt((Circumference / 2) * ((Circumference / 2) - ac) * ((Circumference / 2) - bc) * ((Circumference / 2) - ba)));
+                return MathF.Abs(MathF.Sqrt((Circumference / 2f) * ((Circumference / 2f) - ac) * ((Circumference / 2f) - bc) * ((Circumference / 2f) - ba)));
             }
         }
 

@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Shapes;
+using System;
 using System.Collections.Generic;
-using System.Numerics;
-using Shapes;
 namespace ShapeTester
 {
     class Program
@@ -11,6 +10,7 @@ namespace ShapeTester
             List<Shape> shapes = new List<Shape>();
             float totalTriangleCircumference = 0;
             float averageArea = 0;
+            float biggestVolume = 0;
 
             for (int i = 0; i < 20; i++)
             {
@@ -26,14 +26,20 @@ namespace ShapeTester
                     totalTriangleCircumference += (shape as Triangle).Circumference;
                 }
 
-                if (shape is Cuboid |)
+                if (shape is Shape3D)
                 {
-
+                    if ((shape as Shape3D).Volume > biggestVolume)
+                    {
+                        biggestVolume = (shape as Shape3D).Volume;
+                    }
                 }
-                averageArea += MathF.Round(shape.Area, 1);
-                Console.WriteLine(MathF.Round(shape.Area, 1));
+                Console.WriteLine(shape.Area);
+               averageArea += shape.Area; 
             }
-                Console.WriteLine($"Average area: {MathF.Round(averageArea / 20, 1)}");
+
+            Console.WriteLine();
+            Console.WriteLine($"Total circumference of triangles: {MathF.Round(totalTriangleCircumference, 1)}\nAverage area: {MathF.Round(averageArea / 20, 1)}\nBiggest volume: {biggestVolume}");
+
 
         }
     }
