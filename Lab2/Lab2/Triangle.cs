@@ -29,7 +29,7 @@ namespace Shapes
         { // ac + ba + bc (distance between ac, ba and bc)
             get
             {
-                return ac + ba + bc;
+                return MathF.Round(ac + ba + bc, 1);
             }
         }
 
@@ -37,7 +37,7 @@ namespace Shapes
         { // 1/2 * [x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
             get
             {
-                return (float)MathF.Round(MathF.Sqrt((Circumference / 2) * ((Circumference / 2) - ac) * ((Circumference / 2) - bc) * ((Circumference / 2) - ba)));
+                return MathF.Round(MathF.Sqrt((Circumference / 2) * ((Circumference / 2) - ac) * ((Circumference / 2) - bc) * ((Circumference / 2) - ba)));
             }
         }
 
