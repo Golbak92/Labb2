@@ -11,15 +11,17 @@ namespace Shapes
         public Cuboid(Vector3 center, Vector3 size)
         {
             this.center = center;
-            this.size = size;
+            this.size.X = (float)Math.Round(size.X, 1);
+            this.size.Y = (float)Math.Round(size.Y, 1);
+            this.size.Z = (float)Math.Round(size.Z, 1);
         }
 
         public Cuboid(Vector3 center, float width)
         {
             this.center = center;
-            size.X = width;
-            size.Y = width;
-            size.Z = width;
+            size.X = (float)Math.Round(width, 1);
+            size.Y = size.X;
+            size.Z = size.X;
         }
 
         public bool IsCube

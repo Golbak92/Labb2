@@ -26,16 +26,18 @@ namespace Shapes
 
         public Rectangle(Vector3 center, Vector2 size)
         {
-            this.size = size;
+            //this.size = size;
             this.center = center;
+            this.size.X = (float)Math.Round(size.X, 1);
+            this.size.Y = (float)Math.Round(size.Y, 1);
         }
 
         public Rectangle(Vector3 center, float width)
         {
             this.center = center;
             this.width = width;
-            size.X = width;
-            size.Y = width;
+            size.X = (float)Math.Round(width, 1);
+            size.Y = size.X;
         }
 
         public override float Circumference
@@ -57,7 +59,7 @@ namespace Shapes
         { // width * height;
             get
             {
-                return size.X * size.Y;
+                return (float)Math.Round(size.X * size.Y, 1);
             } 
         }
 
