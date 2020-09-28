@@ -22,6 +22,11 @@ namespace ShapeTester
             foreach (Shape shape in shapes)
             {
                 Console.WriteLine(shape);
+                Console.WriteLine($"Area: {shape.Area}");
+                if (shape is Shape2D)
+                {
+                Console.WriteLine($"Circumference: {(shape as Shape2D).Circumference}\n");
+                }
 
                 if (shape is Triangle)
                 {
@@ -30,9 +35,11 @@ namespace ShapeTester
 
                 if (shape is Shape3D)
                 {
+                Console.WriteLine($"Volume: {(shape as Shape3D).Volume}\n");
                     if ((shape as Shape3D).Volume > biggestVolume)
                     {
                         biggestVolume = (shape as Shape3D).Volume;
+
                     }
                 }
                 averageArea += shape.Area;

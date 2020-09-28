@@ -28,7 +28,7 @@ namespace Shapes
         {  // π * r^2
             get
             { 
-                return MathF.PI * MathF.Pow(radius, 2);
+                return MathF.PI * MathF.Pow(radius, 2f);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Shapes
         {  // π * d == π * 2r
             get
             { 
-                return MathF.PI * (radius * 2);
+                return MathF.PI * (radius * 2f);
             }
         }
 

@@ -72,17 +72,17 @@ namespace Shapes
 
         private static Vector2 VectorTwoRandom()
         {
-            return new Vector2((float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f);
+            return new Vector2(MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1), MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1));
         }
 
         private static Vector3 VectorThreeRandom()
         {
-            return new Vector3((float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f);
+            return new Vector3(MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1), MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1), MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1));
         }
 
         private static float FloatRandom()
         {
-            return (float)rndNumber.NextDouble() * 10;
+            return MathF.Round((float)rndNumber.NextDouble() * 10f + 1.0f, 1);
         }
 
         private static Triangle RandomTriangle(Vector2 p1, Vector2 p2) //Method to calculate the last point in a triangle and to return a random triangle.

@@ -78,7 +78,7 @@ namespace Shapes
         }
         public void Reset()
         {
-            position = 0;
+            position = -1;
         }
 
     }
