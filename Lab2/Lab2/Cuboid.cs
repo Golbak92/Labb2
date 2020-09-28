@@ -51,7 +51,7 @@ namespace Shapes
 
         public override float Volume
         {   //Volume = Length × Width ×  Height
-            get { return size.X * size.Y * size.Z; }
+            get { return MathF.Round(size.X * size.Y * size.Z, 1); }
         }
 
         public override string ToString()

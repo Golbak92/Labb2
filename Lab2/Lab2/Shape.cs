@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Numerics;
 
 
@@ -12,32 +11,32 @@ namespace Shapes
         public abstract float Area { get; }
         public static Shape GenerateShape()
         {
-                switch (rndNumber.Next(0, 7))
-                {
-                    case 0: // Rectangle
-                        return new Rectangle(new Vector3(VectorTwoRandom(), 0), VectorTwoRandom());
+            switch (rndNumber.Next(0, 7))
+            {
+                case 0: // Rectangle
+                    return new Rectangle(new Vector3(VectorTwoRandom(), 0), VectorTwoRandom());
 
-                    case 1: // Square
-                        return new Rectangle(new Vector3(VectorTwoRandom(), 0), FloatRandom());
+                case 1: // Square
+                    return new Rectangle(new Vector3(VectorTwoRandom(), 0), FloatRandom());
 
-                    case 2: // Cuboid
-                        return new Cuboid(VectorThreeRandom(), VectorThreeRandom());
+                case 2: // Cuboid
+                    return new Cuboid(VectorThreeRandom(), VectorThreeRandom());
 
-                    case 3: // Cube
-                        return new Cuboid(VectorThreeRandom(), FloatRandom());
+                case 3: // Cube
+                    return new Cuboid(VectorThreeRandom(), FloatRandom());
 
-                    case 4: // Triangle
+                case 4: // Triangle
                     return RandomTriangle(VectorTwoRandom(), VectorTwoRandom());
 
-                    case 5: // Circle
-                        return new Circle(new Vector3(VectorTwoRandom(), 0), FloatRandom());
+                case 5: // Circle
+                    return new Circle(new Vector3(VectorTwoRandom(), 0), FloatRandom());
 
-                    case 6: // Sphere
-                        return new Sphere(VectorThreeRandom(), FloatRandom());
+                case 6: // Sphere
+                    return new Sphere(VectorThreeRandom(), FloatRandom());
 
-                    default:
-                        return null;
-                }           
+                default:
+                    return null;
+            }
         }
 
 
@@ -83,11 +82,11 @@ namespace Shapes
 
         private static float FloatRandom()
         {
-            return (float)rndNumber.NextDouble();
+            return (float)rndNumber.NextDouble() * 10;
         }
 
         private static Triangle RandomTriangle(Vector2 p1, Vector2 p2) //Method to calculate the last point in a triangle and to return a random triangle.
-        {   
+        {
             Vector2 center = VectorTwoRandom();
             float p3X = center.X * 3 - p1.X - p2.X;
             float p3Y = center.Y * 3 - p1.Y - p2.Y;
