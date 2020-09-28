@@ -34,7 +34,7 @@ namespace ShapeTester
                     }
                 }
                 Console.WriteLine(shape.Area);
-               averageArea += shape.Area; 
+                averageArea += shape.Area;
             }
 
             Console.WriteLine();

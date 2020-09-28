@@ -11,15 +11,15 @@ namespace Shapes
         public Cuboid(Vector3 center, Vector3 size)
         {
             this.center = center;
-            this.size.X = MathF.Round(size.X, 1);
-            this.size.Y = MathF.Round(size.Y, 1);
-            this.size.Z = MathF.Round(size.Z, 1);
+            this.size.X = size.X;
+            this.size.Y = size.Y;
+            this.size.Z = size.Z;
         }
 
         public Cuboid(Vector3 center, float width)
         {
             this.center = center;
-            size.X = MathF.Round(width, 1);
+            size.X = width;
             size.Y = size.X;
             size.Z = size.X;
         }
@@ -51,7 +51,7 @@ namespace Shapes
 
         public override float Volume
         {   //Volume = Length × Width ×  Height
-            get { return MathF.Round(size.X * size.Y * size.Z, 1); }
+            get { return size.X * size.Y * size.Z; }
         }
 
         public override string ToString()

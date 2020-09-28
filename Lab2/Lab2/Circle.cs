@@ -13,7 +13,8 @@ namespace Shapes
         public Circle(Vector3 center, float radius)
         {
             this.center = center;
-            this.radius = MathF.Round(radius, 1);
+            this.radius = radius;
+            this.radius = radius;
         }
 
         public override Vector3 Center
