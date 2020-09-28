@@ -72,12 +72,12 @@ namespace Shapes
 
         private static Vector2 VectorTwoRandom()
         {
-            return new Vector2((float)rndNumber.NextDouble() * 10, (float)rndNumber.NextDouble() * 10);
+            return new Vector2((float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f);
         }
 
         private static Vector3 VectorThreeRandom()
         {
-            return new Vector3((float)rndNumber.NextDouble() * 10, (float)rndNumber.NextDouble() * 10, (float)rndNumber.NextDouble() * 10);
+            return new Vector3((float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f, (float)rndNumber.NextDouble() * 10f + 1.0f);
         }
 
         private static float FloatRandom()
